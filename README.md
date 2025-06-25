@@ -10,10 +10,10 @@ This repository contains the work I produced for a technical assessment on short
 To reproduce the full pipeline, please follow the steps below:
 
 1. **Preprocessing**  
-   Start by running all the cells in the notebook `01_preprocessing.ipynb`, located in the `notebooks` folder. This notebook handles the loading, formatting, and normalization of the input data.
+   Start by running all the cells in the notebook `01_preprocessing.ipynb`, located in the `notebooks` folder. This notebook handles the loading, formatting, and modification of the data for it to be used in training.
 
 2. **Model Definition**  
-   The models are defined and initialized in `02_models.ipynb`. This includes both the baseline and the U-Net model.
+   The models are defined and initialized in `02_models.ipynb`. This includes both the baseline and the 'simple' Unet model and a more complex one.
 
 3. **Evaluation**  
    Once the data is preprocessed and the models are defined, you can run `03_evaluation.ipynb` to evaluate the performance of both models using the chosen metrics and visualization tools.
