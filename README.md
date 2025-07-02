@@ -28,7 +28,7 @@ You can find everything functionnal in the `Nowcasting.py` script and the raw wo
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/nowcasting-radar.git
+   git clone https://github.com/lacottepaul/weather-nowcasting.git
    cd nowcasting-radar
    
 2. Install dependecies:
