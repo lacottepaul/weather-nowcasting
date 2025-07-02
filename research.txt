@@ -3,6 +3,10 @@ Date: 2025-07-02
 
 ## Research Process - From Baseline to Final Script
 
+### Loss choice
+
+I want to start by saying that after checking some state of the art nowcasting project I chose to use MAE and RMSE like most of them and only RMSE in my script to simplify it but users can easily add one as I believe the code is well described and I hope easy to understand. 
+
 ### 1. Initial Baseline
 
 I first implemented a basic persistence model to predict T+1 from the single frame at time T.  
