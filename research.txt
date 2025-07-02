@@ -1,0 +1,25 @@
+Author: Paul Lacotte  
+Date: 2025-07-02  
+
+## Research Process - From Baseline to Final Script
+
+### 1. Initial Baseline
+
+I first implemented a basic persistence model to predict T+1 from the single frame at time T.  
+Eventually, I improved the baseline to match the Unet setup: it now takes 3 consecutive frames as input and simply returns the last one as the prediction. This makes it more consistent for comparison.
+
+### 2. First Attempt at Deep Learning
+
+I then explored state-of-the-art nowcasting models and implemented a Unet version found during my research (see `02_models.ipynb`).  
+However, this model was far too complex for the size of our dataset. The results were poor: the model tended to memorize the data, and predictions in the test phase minimized the loss function but lacked physical consistency.
+
+### 3. Simpler Unet Adaptation
+
+To match the low complexity of the dataset, I simplified the Unet architecture.  
+This yielded immediately better results, with predictions that made more physical and meteorological sense.
+
+### 4. Final Design Choice
+
+In the end, I decided to consolidate everything into a single Python script (`Nowcasting.py`).  
+I find it more intuitive to manage via command-line arguments and well-structured functions than switching back and forth between notebook cells.  
+The code remains fully reproducible: users can easily copy the functions into a notebook and call them if needed.
