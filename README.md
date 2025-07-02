@@ -15,7 +15,7 @@ This project implements a script for forecasting future radar reflectivity image
 ---
 
 The core logic is encapsulated in the `Nowcasting.py` script, which is clean, functional, and ready to use.  
-You’ll also find a set of messy but informative notebooks in the `notebooks/` directory. These contain early explorations, visual tests, and failed model attempts — they’re not meant to be reused as-is but can help understand the design decisions and development path.
+You’ll also find a set of messy but informative notebooks in the `notebooks/` directory. These contain early explorations, visual tests, and failed model attempts — they’re not meant to be reused as-is but can help understand the design decisions and development path. The report for this project is available at `forecasting_report.pdf`.
 
 If you're interested in understanding the reasoning behind the choices made and the steps taken to reach the final script, check out the [`research.txt`](./research.txt) file.
 
