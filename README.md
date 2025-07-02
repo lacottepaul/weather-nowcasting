@@ -63,7 +63,7 @@ Following the baseline model you can launch the Unet training and evaluation wit
    ```
 
 ## Research Notes 
-The file `research.txt` summarizes the development process: from early baseline attempts to deep learning explorations, model tuning, and final implementation choices.
+The file `research.txt` summarizes the development process: from early baseline attempts to deep learning explorations and final implementation choices.
 
 It explains why some decisions were made and what didn't work — particularly useful if you want to extend or adapt the project.
 
