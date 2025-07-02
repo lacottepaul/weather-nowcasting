@@ -70,4 +70,4 @@ It explains why some decisions were made and what didn't work — particularly u
 ## Contact 
 
 For questions or contributions, feel free to reach out. 
-This work was developed as part of a technical test on radar nocasting. 
+This work was developed as part of a technical test on radar nowcasting. 
