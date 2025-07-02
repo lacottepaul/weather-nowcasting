@@ -1,16 +1,23 @@
 # Nowcasting Radar Forecasting
 
-Author: Paul Lacotte  
-Date: 2025-07-02
+**Author:** Paul Lacotte  
+**Date:** 2025-07-02  
 
 ---
 
 ## Description
 
-This project implements a script for forecasting future radar reflectivity images based on past frames. It provides two models:
+This project implements a script for forecasting future radar reflectivity images based on past frames. It includes two models:
 
 - A **persistence baseline model** that predicts the next image will be the same as the last input frame.  
 - A **deep learning model** based on a simple U-Net architecture to learn spatiotemporal dynamics.
+
+---
+
+The core logic is encapsulated in the `Nowcasting.py` script, which is clean, functional, and ready to use.  
+You’ll also find a set of messy but informative notebooks in the `notebooks/` directory. These contain early explorations, visual tests, and failed model attempts — they’re not meant to be reused as-is but can help understand the design decisions and development path.
+
+If you're interested in understanding the reasoning behind the choices made and the steps taken to reach the final script, check out the [`research.txt`](./research.txt) file.
 
 ---
 
@@ -54,6 +61,11 @@ Following the baseline model you can launch the Unet training and evaluation wit
    ```bash
    python3 Nowcasting.py --data_path XXX --model unet --epochs X
    ```
+
+## Research Notes 
+The file `research.txt` summarizes the development process: from early baseline attempts to deep learning explorations, model tuning, and final implementation choices.
+
+It explains why some decisions were made and what didn't work — particularly useful if you want to extend or adapt the project.
 
 ## Contact 
 
