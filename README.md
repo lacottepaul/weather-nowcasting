@@ -1,23 +1,61 @@
-# Weather Nowcasting
+# Nowcasting Radar Forecasting
 
-This repository contains the work I produced for a technical assessment on short-term weather forecasting (nowcasting). The main objective was to implement and train two models:
+Author: Paul Lacotte  
+Date: 2025-07-02
 
-- A simple **persistence baseline**, where the forecast at time *t+1* is simply the input image at time *t*.
-- A more advanced **deep learning model**, such as a U-Net.
+---
 
-## Workflow
+## Description
 
-To reproduce the full pipeline, please follow the steps below:
+This project implements a script for forecasting future radar reflectivity images based on past frames. It provides two models:
 
-1. **Preprocessing**  
-   Start by running all the cells in the notebook `01_preprocessing.ipynb`, located in the `notebooks` folder. This notebook handles the loading, formatting, and modification of the data for it to be used in training.
+- A **persistence baseline model** that predicts the next image will be the same as the last input frame.  
+- A **deep learning model** based on a simple U-Net architecture to learn spatiotemporal dynamics.
 
-2. **Model Definition**  
-   The models are defined and initialized in `02_models.ipynb`. This includes both the baseline and the 'simple' Unet model and a more complex one.
+---
 
-3. **Evaluation**  
-   Once the data is preprocessed and the models are defined, you can run `03_evaluation.ipynb` to evaluate the performance of both models using the chosen metrics and visualization tools.
+You can find everything functionnal in the `Nowcasting.py` script and the raw work including research, wrong turns etc. in the `notebooks`. 
 
-## Alternative 
+## Installation
 
-Run the `all_in_one.py` script that regroups everything from the preprocessing to the evaluationof each models on the test set. 
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/your-username/nowcasting-radar.git
+   cd nowcasting-radar
+   
+2. Install dependecies:
+
+   ```bash
+   pip install -r requirements.txt
+
+## Dataset 
+
+The script expects a NetCDF (.nc) file containing radar reflectivity data over time.
+The main variable should be the reflectivity array with dimensions:
+(time, height, width). All of this is found in `radar_data.nc` 
+
+### Usage 
+
+1. Baseline model 
+
+You can run the baseline model using: 
+
+   ```bash
+   python3 Nowcasting.py --data_path XXX --model baseline
+   ```
+In your console you should see the RMSE score on the test set. 
+That will also gives you 4 images saved as you can see in the `Images` folder. That allows you to visualise the error maps and check if the prediction has a physical sense. 
+
+2. Unet model
+
+Following the baseline model you can launch the Unet training and evaluation with: 
+
+   ```bash
+   python3 Nowcasting.py --data_path XXX --model unet --epochs X
+   ```
+
+## Contact 
+
+For questions or contributions, feel free to reach out. 
+This work was developed as part of a technical test on radar nocasting. 
